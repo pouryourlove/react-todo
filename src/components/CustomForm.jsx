@@ -3,7 +3,7 @@ import { useState } from "react";
 //library imports
 import { PlusIcon } from "@heroicons/react/24/solid";
 
-export const CustomForm = ({ addTask }) => {
+const CustomForm = ({ addTask }) => {
   const [task, setTask] = useState("");
 
   const handleFormSubmit = (e) => {
@@ -40,3 +40,5 @@ export const CustomForm = ({ addTask }) => {
     </form>
   );
 };
+
+export default CustomForm;
