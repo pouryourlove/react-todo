@@ -7,11 +7,12 @@ import { PencilIcon } from "@heroicons/react/24/solid";
 import { TrashIcon } from "@heroicons/react/24/solid";
 import { useState } from "react";
 
-export default function TaskItem({ task, deleteTask }) {
+export default function TaskItem({ task, deleteTask, toggleTask }) {
   const [isChecked, setIsChecked] = useState(task.checked);
 
   const handleCheckboxChange = (e) => {
     setIsChecked(!isChecked);
+    toggleTask(task.id);
   };
 
   return (
